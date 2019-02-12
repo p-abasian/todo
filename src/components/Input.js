@@ -31,14 +31,16 @@ let id=0;
 function dispatchBtnAction(e) {
     if (e.keyCode === 13) {
         const todoitem = e.target.value;
-        e.target.value = "";
-        const item={
-            id:id++,
-            title:todoitem,
-            completed:false,
-            editable:false
+        if (todoitem.length>0) {
+            e.target.value = "";
+            const item={
+                id:id++,
+                title:todoitem,
+                completed:false,
+                editable:false
+            }
+            store.dispatch(setTodo(item));
         }
-        store.dispatch(setTodo(item));
     }
 
 }
