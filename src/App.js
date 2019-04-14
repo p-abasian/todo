@@ -8,8 +8,7 @@ class App extends Component {
     return [
         <Input key={1}/>,
         <TodoList key={2} todolist={store.getState().todolist}/>
-      /*<HelloWorld key={2} tech={store.getState().tech} />,
-      <ButtonGroup key={3} technologies={["React", "Elm", "React-redux"]} />*/
+     
     ];
   }
 }
